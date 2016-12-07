@@ -1,0 +1,55 @@
+<div class="wrapper_top_button">
+    <div class="icon_user">
+        <a routerLink="/user" routerLinkActive="active"><img class="icon_img_user" src="../../assets/profile.png" alt=""/></a>
+    </div>
+    <div class="icon_settings">
+        <a routerLink="/settings" routerLinkActive="active"><img class="icon_img_carrousel" src="../../assets/settings.png" alt=""/></a>
+    </div>
+</div>
+
+<div class="card-container">
+        <sc-card
+                *ngFor="let card of cards; let i = index;"
+                [callDestroy]="card.destroyEvent"
+                [orientation]="orientation"
+                (onRelease)="onRelease($event)"
+                (onSwipe)="onSwipe($event)"
+                (onAbort)="onAbort($event)"
+                [tinder-card]="overlay"
+                [callLike]="card.likeEvent"
+                (onLike)="onCardLike($event)">
+
+            <div class="card-content">
+                <img [ngClass]="{'alone': card.alone === false}" [src]="card.leftUrl" draggable="false"/>
+                <img *ngIf="card.alone" [src]="card.rightUrl" draggable="false"/>
+            </div>
+        </sc-card>
+</div>
+<div class="buttons">
+        <div class="left-action-button" (click)="like(false)">
+            <img [src]=" setButtonImage() === true ? '/assets/heart.png':'/assets/stop.png' ">
+        </div>
+        <div class="middle-action-button" (click)="toggleComments()">
+            <img src="/assets/comment.png">
+        </div>
+        <div class="right-action-button" (click)="like(true)">
+            <img src="/assets/heart.png">
+        </div>
+</div>
+
+
+<div *ngIf="visible" class="comments_section">
+    <input type="text" placeholder="New Comment"/>
+    <div class="mock_comments">
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            </p>
+        </div>
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+            </p>
+        </div>
+    </div>
+</div>

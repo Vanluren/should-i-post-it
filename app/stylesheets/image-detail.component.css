@@ -1,0 +1,117 @@
+:host {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.image_detail_wrapper{
+    width: 100%;
+    height: 100%;
+}
+.image_detail_image{
+    width: 100%;
+    height: 750px;
+    margin: 75px auto 0 auto;
+    padding: 10px 0 10px 0;
+    background-color: white;
+}
+.image_detail_image img{
+    width: 100%;
+    height: 100%;
+}
+
+.action_bar{
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    width: 100%;
+    margin: 10px;
+}
+
+.action_bar img{ height: 150px;}
+
+.comments_heart{
+    position: relative;
+    text-align: center;
+
+}
+.comments_bubble{
+    margin-left: 15px;
+    border-radius: 100% ;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition:.3s;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.comments_bubble img{
+    width: 170px;
+    height: 170px;
+}
+.comments_bubble svg{
+    fill: white;
+}
+
+.comments_overlay_number{
+    color: black;
+    font-size: 40px;
+    position: relative;
+    margin: -100px auto;
+}
+.comments_bin {
+    margin-left: 40%;
+}
+.wrapper_top_button{
+    display: block;
+    width:100%;
+    margin-top: 5%;
+}
+.top_icon{
+    display: inline-block;
+    width: 100px;
+    margin-left: 2%;
+}
+.top_icon img{
+    max-height:100%;
+    max-width:100%;
+}
+
+.comments_section{
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    font-size: 45px;
+}
+.comments_section input{
+    align-content: center;
+    width: 90%;
+    height: 75px;
+    background-color: transparent;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom: 1px solid grey;
+    font-size: 45px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-style: italic;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    font-style: italic;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    font-style: italic;
+}
+:-moz-placeholder { /* Firefox 18- */
+    font-style: italic;
+}
+.mock_comments{
+    margin-top: 5px;
+    color: grey;
+    width: 90%;
+    border-bottom: grey;
+}
+
+.mock_comments div{
+    border-bottom: 1px solid grey;
+}

@@ -1,0 +1,41 @@
+<div class="wrapper_top_button">
+    <div class="top_icon">
+        <a routerLink="/user" routerLinkActive="active"><img src="../../assets/left-arrow-angle.svg" alt=""/></a>
+    </div>
+</div>
+
+<div *ngIf="image" class="image_detail_wrapper">
+    <div class="image_detail_image">
+        <img src="{{image.imageUrl}}">
+    </div>
+
+    <div class="action_bar">
+        <div class="comments_heart">
+            <img src="assets/white_heart.png" class="comments_overlay_image">
+            <div class="comments_overlay_number">{{image.comments}}</div>
+        </div>
+        <div class="comments_bubble" (click)="toggleComments()">
+            <img src="assets/comment.svg">
+        </div>
+        <div class="comments_bin">
+            <img src="assets/bin.svg">
+        </div>
+    </div>
+
+    <div *ngIf="visible" class="comments_section">
+        <input type="text" placeholder="New Comment"/>
+        <div class="mock_comments">
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                </p>
+            </div>
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+

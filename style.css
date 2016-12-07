@@ -1,0 +1,16 @@
+html {
+    background: url('assets/Baggrund.png');
+    -webkit-background-size: 125%;
+    -moz-background-size: 125%;
+    -o-background-size: 125%;
+    background-size: 125%;
+}
+body {
+    color: white;
+    font-family: sans-serif;
+    max-width: 100%;
+    max-height: 700px;
+}
+
+
+
