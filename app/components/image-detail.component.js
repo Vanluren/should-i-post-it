@@ -16,8 +16,9 @@ var router_1 = require("@angular/router");
 var common_1 = require('@angular/common');
 var user_service_1 = require("../services/user.service");
 var ImageDetailComponent = (function () {
-    function ImageDetailComponent(router, userService, location) {
+    function ImageDetailComponent(router, imageRouter, userService, location) {
         this.router = router;
+        this.imageRouter = imageRouter;
         this.userService = userService;
         this.location = location;
         this.visible = false;
@@ -30,16 +31,35 @@ var ImageDetailComponent = (function () {
                 .then(function (image) { return _this.image = image; });
         });
         this.getImages();
+        this.setRandomImageString();
     };
     ImageDetailComponent.prototype.getImages = function () {
         var _this = this;
         this.userService.getImages().then(function (userImages) { return _this.userImages = userImages; });
     };
+    ImageDetailComponent.prototype.setRandomImageString = function () {
+        this.randomNumber1 = Math.floor((Math.random() * 10) + 1);
+        this.randomNumber2 = Math.floor((Math.random() * 10) + 1);
+        if (this.randomNumber1 == this.randomNumber2) {
+            this.randomNumber1 = Math.floor((Math.random() * 10) + 1);
+        }
+        else {
+            this.randomImageStringRight = 'assets/mock-user-images/johnny/jd' + this.randomNumber1 + '.jpg';
+            this.randomImageStringLeft = 'assets/mock-user-images/johnny/jd' + this.randomNumber2 + '.jpg';
+        }
+        console.log(this.randomImageStringRight);
+        console.log(this.randomImageStringLeft);
+        console.log(this.randomNumber1);
+        console.log(this.randomNumber2);
+    };
     ImageDetailComponent.prototype.goBack = function () {
         this.location.back();
     };
-    ImageDetailComponent.prototype.toggleComments = function () {
+    ImageDetailComponent.prototype.toggleCommentsAndSuggestions = function () {
         this.visible = !this.visible;
+    };
+    ImageDetailComponent.prototype.gotoDetail = function (id) {
+        this.imageRouter.navigate(['/detail', id]);
     };
     ImageDetailComponent = __decorate([
         core_1.Component({
@@ -47,7 +67,7 @@ var ImageDetailComponent = (function () {
             templateUrl: 'app/templates/image-detail.component.html',
             styleUrls: ['app/stylesheets/image-detail.component.css']
         }), 
-        __metadata('design:paramtypes', [router_1.ActivatedRoute, user_service_1.UserService, common_1.Location])
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, user_service_1.UserService, common_1.Location])
     ], ImageDetailComponent);
     return ImageDetailComponent;
 }());

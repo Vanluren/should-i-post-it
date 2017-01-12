@@ -18,7 +18,8 @@ export class SingleUserComponent{
     userImages: MockUserImages[];
     selectedImage: MockUserImages;
 
-    constructor(private router: Router,
+    constructor(
+        private router: Router,
         private userService: UserService) {
     }
 

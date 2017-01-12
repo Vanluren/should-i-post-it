@@ -51,7 +51,6 @@ export class CardsComponent {
             });
 
         }
-
     }
 
     like(like) {

@@ -14,7 +14,7 @@
             <img src="assets/white_heart.png" class="comments_overlay_image">
             <div class="comments_overlay_number">{{image.comments}}</div>
         </div>
-        <div class="comments_bubble" (click)="toggleComments()">
+        <div class="comments_bubble" (click)="toggleCommentsAndSuggestions()">
             <img src="assets/comment.svg">
         </div>
         <div class="comments_bin">
@@ -37,11 +37,25 @@
             </div>
         </div>
     </div>
+    <div class="line"><hr/></div>
+    <div *ngIf="!visible" class="image_suggestions_wrapper">
+        <div class="image_suggestions_content">
+            <div class="image_suggestions_content_img left">
+                <img [src]=randomImageStringLeft (click)="gotoDetail(randomNumber2)">
+                <div class="image_suggestions_content_comments_overlay">
+                    <img src="../../assets/heart.svg" class="image_suggestions_content_comments_overlay_image">
+                    <div class="image_suggestions_comments_overlay_number">{{image.comments}}</div>
+                </div>
+            </div>
 
-    <div class="suggestions">
-        <div *ngFor="let image of userImages; let idx=index" class="user_image" (click)="gotoDetail(image)">
-            <div *ngIf="" class="image_wrapper">
-                <img [src]="image.imageUrl">
+            <div class="image_suggestions_content_img right">
+                <img [src]=randomImageStringRight (click)="gotoDetail(randomNumber1)">
+                <div class="image_suggestions_content_comments_overlay">
+                    <img src="../../assets/heart.svg" class="image_suggestions_content_comments_overlay_image">
+                    <div class="image_suggestions_comments_overlay_number">
+                        {{image.comments}}
+                    </div>
+                </div>
             </div>
         </div>
     </div>

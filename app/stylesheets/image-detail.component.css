@@ -115,3 +115,54 @@
 .mock_comments div{
     border-bottom: 1px solid grey;
 }
+
+.image_suggestions_content{
+    margin: 100px 30px 0 38px;
+}
+.image_suggestions_content_img{
+    border-radius: 4px;
+    width: 400px;
+    height: 400px;
+}
+
+.image_suggestions_content_img.left{
+    float: left;
+}
+.image_suggestions_content_img.right{
+    float: right;
+    margin-right: 20px;
+}
+
+.image_suggestions_content img{
+    width: 400px;
+    height: 400px;
+}
+
+.image_suggestions_content_comments_overlay{
+    color: #000;
+    padding: 0;
+    margin: -325px;
+    position: relative;
+    text-align: center;
+    right: -150px;
+    bottom: 75px;
+}
+.image_suggestions_content_comments_overlay img{
+    height: 95px;
+}
+
+.line{
+    max-width: 80%;
+    margin: 45px auto -45px auto;
+}
+
+.image_suggestions_comments_overlay_number{
+    font-size: 30px;
+    color: black;
+    left: 0;
+    position: absolute;
+    top: 23px;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
