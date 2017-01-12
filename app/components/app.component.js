@@ -31,10 +31,9 @@ var AppComponent = (function () {
             templateUrl: '/app/templates/app.component.html',
             styleUrls: ['app/stylesheets/app.component.css']
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object])
+        __metadata('design:paramtypes', [router_1.Router])
     ], AppComponent);
     return AppComponent;
-    var _a;
 }());
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

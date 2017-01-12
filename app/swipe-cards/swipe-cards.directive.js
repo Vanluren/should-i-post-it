@@ -136,7 +136,7 @@ var TinderCardDirective = (function () {
     ], TinderCardDirective.prototype, "overlay", void 0);
     __decorate([
         core_1.Input(), 
-        __metadata('design:type', (typeof (_a = typeof core_1.EventEmitter !== 'undefined' && core_1.EventEmitter) === 'function' && _a) || Object)
+        __metadata('design:type', core_1.EventEmitter)
     ], TinderCardDirective.prototype, "callLike", void 0);
     __decorate([
         core_1.Input(), 
@@ -148,7 +148,7 @@ var TinderCardDirective = (function () {
     ], TinderCardDirective.prototype, "orientation", void 0);
     __decorate([
         core_1.Output(), 
-        __metadata('design:type', (typeof (_b = typeof core_1.EventEmitter !== 'undefined' && core_1.EventEmitter) === 'function' && _b) || Object)
+        __metadata('design:type', core_1.EventEmitter)
     ], TinderCardDirective.prototype, "onLike", void 0);
     __decorate([
         core_1.HostListener('onSwipe', ['$event']), 
@@ -175,10 +175,9 @@ var TinderCardDirective = (function () {
                 class: 'card-heap'
             }
         }), 
-        __metadata('design:paramtypes', [(typeof (_c = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _c) || Object, (typeof (_d = typeof core_1.Renderer !== 'undefined' && core_1.Renderer) === 'function' && _d) || Object])
+        __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
     ], TinderCardDirective);
     return TinderCardDirective;
-    var _a, _b, _c, _d;
 }());
 exports.TinderCardDirective = TinderCardDirective;
 //# sourceMappingURL=swipe-cards.directive.js.map

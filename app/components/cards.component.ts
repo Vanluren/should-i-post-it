@@ -37,7 +37,7 @@ export class CardsComponent {
 
 
     constructor() {
-        var randomUser = ['Ida', 'Emmeli','Jonas','Maria','Ida', 'Emmeli','Jonas','Maria','Jonas', 'Ida','Jonas'];
+        var randomUser = ['Adam','Denise','El','Ida', 'Emmeli','Jonas', 'Maria', 'Elvira','Frederik','Gary','Sylvester'];
         this.imageAlone();
         for (let i = 0; i < 50; i++) {
             const randomNumber = Math.floor((Math.random()*10)+1);
@@ -45,8 +45,8 @@ export class CardsComponent {
                 id: i + 1,
                 likeEvent: new EventEmitter(),
                 destroyEvent: new EventEmitter(),
-                leftUrl: 'assets/mock-user-images/' +randomUser[randomNumber]+'1.png   ',
-                rightUrl:'assets/mock-user-images/' + randomUser[randomNumber]+'2.png',
+                leftUrl: 'assets/mock-user-images/'+randomUser[randomNumber]+'1.jpg   ',
+                rightUrl:'assets/mock-user-images/'+randomUser[randomNumber]+'2.jpg',
                 alone: this.aloneArray[i]
             });
 

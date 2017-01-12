@@ -119,19 +119,19 @@ var CardComponent = (function () {
     ], CardComponent.prototype, "orientation", void 0);
     __decorate([
         core_1.Input(), 
-        __metadata('design:type', (typeof (_a = typeof core_1.EventEmitter !== 'undefined' && core_1.EventEmitter) === 'function' && _a) || Object)
+        __metadata('design:type', core_1.EventEmitter)
     ], CardComponent.prototype, "callDestroy", void 0);
     __decorate([
         core_1.Output(), 
-        __metadata('design:type', (typeof (_b = typeof core_1.EventEmitter !== 'undefined' && core_1.EventEmitter) === 'function' && _b) || Object)
+        __metadata('design:type', core_1.EventEmitter)
     ], CardComponent.prototype, "onRelease", void 0);
     __decorate([
         core_1.Output(), 
-        __metadata('design:type', (typeof (_c = typeof core_1.EventEmitter !== 'undefined' && core_1.EventEmitter) === 'function' && _c) || Object)
+        __metadata('design:type', core_1.EventEmitter)
     ], CardComponent.prototype, "onSwipe", void 0);
     __decorate([
         core_1.Output(), 
-        __metadata('design:type', (typeof (_d = typeof core_1.EventEmitter !== 'undefined' && core_1.EventEmitter) === 'function' && _d) || Object)
+        __metadata('design:type', core_1.EventEmitter)
     ], CardComponent.prototype, "onAbort", void 0);
     __decorate([
         core_1.HostListener('pan', ['$event']), 
@@ -150,10 +150,9 @@ var CardComponent = (function () {
             template: '<ng-content></ng-content>',
             selector: 'sc-card',
             styleUrls: ['app/stylesheets/swipe-cards.component.css'] }), 
-        __metadata('design:paramtypes', [(typeof (_e = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _e) || Object, (typeof (_f = typeof core_1.Renderer !== 'undefined' && core_1.Renderer) === 'function' && _f) || Object])
+        __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
     ], CardComponent);
     return CardComponent;
-    var _a, _b, _c, _d, _e, _f;
 }());
 exports.CardComponent = CardComponent;
 //# sourceMappingURL=swipe-cards.component.js.map

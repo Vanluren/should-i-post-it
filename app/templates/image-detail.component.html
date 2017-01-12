@@ -37,5 +37,13 @@
             </div>
         </div>
     </div>
+
+    <div class="suggestions">
+        <div *ngFor="let image of userImages; let idx=index" class="user_image" (click)="gotoDetail(image)">
+            <div *ngIf="" class="image_wrapper">
+                <img [src]="image.imageUrl">
+            </div>
+        </div>
+    </div>
 </div>
 

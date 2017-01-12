@@ -32,7 +32,7 @@ var CardsComponent = (function () {
         this.cardLogs = [];
         this.tinderCardLogs = [];
         this.aloneArray = [];
-        var randomUser = ['Ida', 'Emmeli', 'Jonas', 'Maria', 'Ida', 'Emmeli', 'Jonas', 'Maria', 'Jonas', 'Ida', 'Jonas'];
+        var randomUser = ['Adam', 'Denise', 'El', 'Ida', 'Emmeli', 'Jonas', 'Maria', 'Elvira', 'Frederik', 'Gary', 'Sylvester'];
         this.imageAlone();
         for (var i = 0; i < 50; i++) {
             var randomNumber = Math.floor((Math.random() * 10) + 1);
@@ -40,8 +40,8 @@ var CardsComponent = (function () {
                 id: i + 1,
                 likeEvent: new core_1.EventEmitter(),
                 destroyEvent: new core_1.EventEmitter(),
-                leftUrl: 'assets/mock-user-images/' + randomUser[randomNumber] + '1.png   ',
-                rightUrl: 'assets/mock-user-images/' + randomUser[randomNumber] + '2.png',
+                leftUrl: 'assets/mock-user-images/' + randomUser[randomNumber] + '1.jpg   ',
+                rightUrl: 'assets/mock-user-images/' + randomUser[randomNumber] + '2.jpg',
                 alone: this.aloneArray[i]
             });
         }

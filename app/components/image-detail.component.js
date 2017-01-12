@@ -29,6 +29,11 @@ var ImageDetailComponent = (function () {
             _this.userService.getImage(id)
                 .then(function (image) { return _this.image = image; });
         });
+        this.getImages();
+    };
+    ImageDetailComponent.prototype.getImages = function () {
+        var _this = this;
+        this.userService.getImages().then(function (userImages) { return _this.userImages = userImages; });
     };
     ImageDetailComponent.prototype.goBack = function () {
         this.location.back();
@@ -42,10 +47,9 @@ var ImageDetailComponent = (function () {
             templateUrl: 'app/templates/image-detail.component.html',
             styleUrls: ['app/stylesheets/image-detail.component.css']
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.ActivatedRoute !== 'undefined' && router_1.ActivatedRoute) === 'function' && _a) || Object, user_service_1.UserService, (typeof (_b = typeof common_1.Location !== 'undefined' && common_1.Location) === 'function' && _b) || Object])
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, user_service_1.UserService, common_1.Location])
     ], ImageDetailComponent);
     return ImageDetailComponent;
-    var _a, _b;
 }());
 exports.ImageDetailComponent = ImageDetailComponent;
 //# sourceMappingURL=image-detail.component.js.map

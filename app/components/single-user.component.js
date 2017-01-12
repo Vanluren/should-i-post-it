@@ -41,10 +41,9 @@ var SingleUserComponent = (function () {
             templateUrl: 'app/templates/single-user.component.html',
             styleUrls: ['app/stylesheets/single-user.component.css']
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object, user_service_1.UserService])
+        __metadata('design:paramtypes', [router_1.Router, user_service_1.UserService])
     ], SingleUserComponent);
     return SingleUserComponent;
-    var _a;
 }());
 exports.SingleUserComponent = SingleUserComponent;
 //# sourceMappingURL=single-user.component.js.map

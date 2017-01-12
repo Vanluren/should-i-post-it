@@ -15,6 +15,7 @@ import { UserService } from "../services/user.service";
 })
 export class ImageDetailComponent implements OnInit {
     image: MockUserImages;
+    userImages: MockUserImages[];
     private visible: boolean = false;
 
     constructor(
@@ -29,8 +30,12 @@ export class ImageDetailComponent implements OnInit {
             this.userService.getImage(id)
                 .then(image => this.image = image);
         });
+        this.getImages();
     }
 
+    getImages(): void{
+        this.userService.getImages().then(userImages => this.userImages = userImages);
+    }
     goBack(): void {
         this.location.back();
     }
