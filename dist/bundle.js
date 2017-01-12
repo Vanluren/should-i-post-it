@@ -44,20 +44,28 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	__webpack_require__(1);
+	(function webpackMissingModule() { throw new Error("Cannot find module \"build\""); }());
+
+
+/***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
 	"use strict";
 	/**
 	 * Created by villadsvalur on 26/10/2016.
 	 */
-	var platform_browser_dynamic_1 = __webpack_require__(1);
-	var app_module_1 = __webpack_require__(23);
-	var core_1 = __webpack_require__(3);
+	var platform_browser_dynamic_1 = __webpack_require__(2);
+	var app_module_1 = __webpack_require__(24);
+	var core_1 = __webpack_require__(4);
 	core_1.enableProdMode();
 	var platform = platform_browser_dynamic_1.platformBrowserDynamic();
 	platform.bootstrapModule(app_module_1.AppModule);
 	//# sourceMappingURL=main.js.map
 
 /***/ },
-/* 1 */
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -66,7 +74,7 @@
 	 * License: MIT
 	 */
 	(function (global, factory) {
-	     true ? factory(exports, __webpack_require__(2), __webpack_require__(3), __webpack_require__(21)) :
+	     true ? factory(exports, __webpack_require__(3), __webpack_require__(4), __webpack_require__(22)) :
 	    typeof define === 'function' && define.amd ? define(['exports', '@angular/compiler', '@angular/core', '@angular/platform-browser'], factory) :
 	    (factory((global.ng = global.ng || {}, global.ng.platformBrowserDynamic = global.ng.platformBrowserDynamic || {}),global.ng.compiler,global.ng.core,global.ng.platformBrowser));
 	}(this, function (exports,_angular_compiler,_angular_core,_angular_platformBrowser) { 'use strict';
@@ -226,7 +234,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 2 */
+/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -235,7 +243,7 @@
 	 * License: MIT
 	 */
 	(function (global, factory) {
-	   true ? factory(exports, __webpack_require__(3)) :
+	   true ? factory(exports, __webpack_require__(4)) :
 	  typeof define === 'function' && define.amd ? define(['exports', '@angular/core'], factory) :
 	  (factory((global.ng = global.ng || {}, global.ng.compiler = global.ng.compiler || {}),global.ng.core));
 	}(this, function (exports,_angular_core) { 'use strict';
@@ -18278,7 +18286,7 @@
 
 
 /***/ },
-/* 3 */
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -18287,7 +18295,7 @@
 	 * License: MIT
 	 */
 	(function (global, factory) {
-	     true ? factory(exports, __webpack_require__(4), __webpack_require__(5)) :
+	     true ? factory(exports, __webpack_require__(5), __webpack_require__(6)) :
 	    typeof define === 'function' && define.amd ? define(['exports', 'rxjs/Subject', 'rxjs/Observable'], factory) :
 	    (factory((global.ng = global.ng || {}, global.ng.core = global.ng.core || {}),global.Rx,global.Rx));
 	}(this, function (exports,rxjs_Subject,rxjs_Observable) { 'use strict';
@@ -27932,7 +27940,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 4 */
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -27941,12 +27949,12 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var Observable_1 = __webpack_require__(5);
-	var Subscriber_1 = __webpack_require__(8);
-	var Subscription_1 = __webpack_require__(10);
-	var ObjectUnsubscribedError_1 = __webpack_require__(19);
-	var SubjectSubscription_1 = __webpack_require__(20);
-	var rxSubscriber_1 = __webpack_require__(17);
+	var Observable_1 = __webpack_require__(6);
+	var Subscriber_1 = __webpack_require__(9);
+	var Subscription_1 = __webpack_require__(11);
+	var ObjectUnsubscribedError_1 = __webpack_require__(20);
+	var SubjectSubscription_1 = __webpack_require__(21);
+	var rxSubscriber_1 = __webpack_require__(18);
 	/**
 	 * @class SubjectSubscriber<T>
 	 */
@@ -28097,13 +28105,13 @@
 	//# sourceMappingURL=Subject.js.map
 
 /***/ },
-/* 5 */
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var root_1 = __webpack_require__(6);
-	var toSubscriber_1 = __webpack_require__(7);
-	var observable_1 = __webpack_require__(18);
+	var root_1 = __webpack_require__(7);
+	var toSubscriber_1 = __webpack_require__(8);
+	var observable_1 = __webpack_require__(19);
 	/**
 	 * A representation of any set of values over any amount of time. This the most basic building block
 	 * of RxJS.
@@ -28242,7 +28250,7 @@
 	//# sourceMappingURL=Observable.js.map
 
 /***/ },
-/* 6 */
+/* 7 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {"use strict";
@@ -28263,12 +28271,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var Subscriber_1 = __webpack_require__(8);
-	var rxSubscriber_1 = __webpack_require__(17);
+	var Subscriber_1 = __webpack_require__(9);
+	var rxSubscriber_1 = __webpack_require__(18);
 	function toSubscriber(nextOrObserver, error, complete) {
 	    if (nextOrObserver) {
 	        if (nextOrObserver instanceof Subscriber_1.Subscriber) {
@@ -28287,7 +28295,7 @@
 	//# sourceMappingURL=toSubscriber.js.map
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28296,10 +28304,10 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var isFunction_1 = __webpack_require__(9);
-	var Subscription_1 = __webpack_require__(10);
-	var Observer_1 = __webpack_require__(16);
-	var rxSubscriber_1 = __webpack_require__(17);
+	var isFunction_1 = __webpack_require__(10);
+	var Subscription_1 = __webpack_require__(11);
+	var Observer_1 = __webpack_require__(17);
+	var rxSubscriber_1 = __webpack_require__(18);
 	/**
 	 * Implements the {@link Observer} interface and extends the
 	 * {@link Subscription} class. While the {@link Observer} is the public API for
@@ -28541,7 +28549,7 @@
 	//# sourceMappingURL=Subscriber.js.map
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -28552,16 +28560,16 @@
 	//# sourceMappingURL=isFunction.js.map
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var isArray_1 = __webpack_require__(11);
-	var isObject_1 = __webpack_require__(12);
-	var isFunction_1 = __webpack_require__(9);
-	var tryCatch_1 = __webpack_require__(13);
-	var errorObject_1 = __webpack_require__(14);
-	var UnsubscriptionError_1 = __webpack_require__(15);
+	var isArray_1 = __webpack_require__(12);
+	var isObject_1 = __webpack_require__(13);
+	var isFunction_1 = __webpack_require__(10);
+	var tryCatch_1 = __webpack_require__(14);
+	var errorObject_1 = __webpack_require__(15);
+	var UnsubscriptionError_1 = __webpack_require__(16);
 	/**
 	 * Represents a disposable resource, such as the execution of an Observable. A
 	 * Subscription has one important method, `unsubscribe`, that takes no argument
@@ -28710,7 +28718,7 @@
 	//# sourceMappingURL=Subscription.js.map
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -28718,7 +28726,7 @@
 	//# sourceMappingURL=isArray.js.map
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -28729,11 +28737,11 @@
 	//# sourceMappingURL=isObject.js.map
 
 /***/ },
-/* 13 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var errorObject_1 = __webpack_require__(14);
+	var errorObject_1 = __webpack_require__(15);
 	var tryCatchTarget;
 	function tryCatcher() {
 	    try {
@@ -28753,7 +28761,7 @@
 	//# sourceMappingURL=tryCatch.js.map
 
 /***/ },
-/* 14 */
+/* 15 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -28762,7 +28770,7 @@
 	//# sourceMappingURL=errorObject.js.map
 
 /***/ },
-/* 15 */
+/* 16 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -28792,7 +28800,7 @@
 	//# sourceMappingURL=UnsubscriptionError.js.map
 
 /***/ },
-/* 16 */
+/* 17 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -28805,22 +28813,22 @@
 	//# sourceMappingURL=Observer.js.map
 
 /***/ },
-/* 17 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var root_1 = __webpack_require__(6);
+	var root_1 = __webpack_require__(7);
 	var Symbol = root_1.root.Symbol;
 	exports.$$rxSubscriber = (typeof Symbol === 'function' && typeof Symbol.for === 'function') ?
 	    Symbol.for('rxSubscriber') : '@@rxSubscriber';
 	//# sourceMappingURL=rxSubscriber.js.map
 
 /***/ },
-/* 18 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var root_1 = __webpack_require__(6);
+	var root_1 = __webpack_require__(7);
 	function getSymbolObservable(context) {
 	    var $$observable;
 	    var Symbol = context.Symbol;
@@ -28843,7 +28851,7 @@
 	//# sourceMappingURL=observable.js.map
 
 /***/ },
-/* 19 */
+/* 20 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -28875,7 +28883,7 @@
 	//# sourceMappingURL=ObjectUnsubscribedError.js.map
 
 /***/ },
-/* 20 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28884,7 +28892,7 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var Subscription_1 = __webpack_require__(10);
+	var Subscription_1 = __webpack_require__(11);
 	/**
 	 * We need this JSDoc comment for affecting ESDoc.
 	 * @ignore
@@ -28920,7 +28928,7 @@
 	//# sourceMappingURL=SubjectSubscription.js.map
 
 /***/ },
-/* 21 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -28929,7 +28937,7 @@
 	 * License: MIT
 	 */
 	(function (global, factory) {
-	     true ? factory(exports, __webpack_require__(22), __webpack_require__(3)) :
+	     true ? factory(exports, __webpack_require__(23), __webpack_require__(4)) :
 	    typeof define === 'function' && define.amd ? define(['exports', '@angular/common', '@angular/core'], factory) :
 	    (factory((global.ng = global.ng || {}, global.ng.platformBrowser = global.ng.platformBrowser || {}),global.ng.common,global.ng.core));
 	}(this, function (exports,_angular_common,_angular_core) { 'use strict';
@@ -31632,7 +31640,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 22 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -31641,7 +31649,7 @@
 	 * License: MIT
 	 */
 	(function (global, factory) {
-	     true ? factory(exports, __webpack_require__(3)) :
+	     true ? factory(exports, __webpack_require__(4)) :
 	    typeof define === 'function' && define.amd ? define(['exports', '@angular/core'], factory) :
 	    (factory((global.ng = global.ng || {}, global.ng.common = global.ng.common || {}),global.ng.core));
 	}(this, function (exports,_angular_core) { 'use strict';
@@ -34661,7 +34669,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 23 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -34677,16 +34685,16 @@
 	/**
 	 * Created by villadsvalur on 26/10/2016.
 	 */
-	var core_1 = __webpack_require__(3);
-	var platform_browser_1 = __webpack_require__(21);
-	var app_component_1 = __webpack_require__(24);
-	var settings_component_1 = __webpack_require__(57);
-	var app_routing_module_1 = __webpack_require__(58);
-	var user_service_1 = __webpack_require__(65);
-	var swipe_cards_module_1 = __webpack_require__(62);
-	var cards_component_1 = __webpack_require__(59);
-	var single_user_component_1 = __webpack_require__(68);
-	var image_detail_component_1 = __webpack_require__(67);
+	var core_1 = __webpack_require__(4);
+	var platform_browser_1 = __webpack_require__(22);
+	var app_component_1 = __webpack_require__(25);
+	var settings_component_1 = __webpack_require__(58);
+	var app_routing_module_1 = __webpack_require__(59);
+	var user_service_1 = __webpack_require__(66);
+	var swipe_cards_module_1 = __webpack_require__(63);
+	var cards_component_1 = __webpack_require__(60);
+	var single_user_component_1 = __webpack_require__(69);
+	var image_detail_component_1 = __webpack_require__(68);
 	var AppModule = (function () {
 	    function AppModule() {
 	    }
@@ -34710,7 +34718,7 @@
 	//# sourceMappingURL=app.module.js.map
 
 /***/ },
-/* 24 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -34726,8 +34734,8 @@
 	/**
 	 * Created by villadsvalur on 26/10/2016.
 	 */
-	var core_1 = __webpack_require__(3);
-	var router_1 = __webpack_require__(25);
+	var core_1 = __webpack_require__(4);
+	var router_1 = __webpack_require__(26);
 	var AppComponent = (function () {
 	    function AppComponent(router) {
 	        this.router = router;
@@ -34746,16 +34754,15 @@
 	            templateUrl: '/app/templates/app.component.html',
 	            styleUrls: ['app/stylesheets/app.component.css']
 	        }), 
-	        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object])
+	        __metadata('design:paramtypes', [router_1.Router])
 	    ], AppComponent);
 	    return AppComponent;
-	    var _a;
 	}());
 	exports.AppComponent = AppComponent;
 	//# sourceMappingURL=app.component.js.map
 
 /***/ },
-/* 25 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -34764,7 +34771,7 @@
 	 * License: MIT
 	 */
 	(function (global, factory) {
-	     true ? factory(exports, __webpack_require__(22), __webpack_require__(3), __webpack_require__(4), __webpack_require__(26), __webpack_require__(39), __webpack_require__(40), __webpack_require__(45), __webpack_require__(46), __webpack_require__(47), __webpack_require__(41), __webpack_require__(48), __webpack_require__(5), __webpack_require__(49), __webpack_require__(50), __webpack_require__(51), __webpack_require__(52), __webpack_require__(53), __webpack_require__(54), __webpack_require__(55), __webpack_require__(56)) :
+	     true ? factory(exports, __webpack_require__(23), __webpack_require__(4), __webpack_require__(5), __webpack_require__(27), __webpack_require__(40), __webpack_require__(41), __webpack_require__(46), __webpack_require__(47), __webpack_require__(48), __webpack_require__(42), __webpack_require__(49), __webpack_require__(6), __webpack_require__(50), __webpack_require__(51), __webpack_require__(52), __webpack_require__(53), __webpack_require__(54), __webpack_require__(55), __webpack_require__(56), __webpack_require__(57)) :
 	    typeof define === 'function' && define.amd ? define(['exports', '@angular/common', '@angular/core', 'rxjs/Subject', 'rxjs/observable/from', 'rxjs/observable/of', 'rxjs/operator/concatMap', 'rxjs/operator/every', 'rxjs/operator/map', 'rxjs/operator/mergeAll', 'rxjs/operator/mergeMap', 'rxjs/operator/reduce', 'rxjs/Observable', 'rxjs/operator/catch', 'rxjs/operator/concatAll', 'rxjs/operator/first', 'rxjs/util/EmptyError', 'rxjs/observable/fromPromise', 'rxjs/operator/last', 'rxjs/BehaviorSubject', 'rxjs/operator/filter'], factory) :
 	    (factory((global.ng = global.ng || {}, global.ng.router = global.ng.router || {}),global.ng.common,global.ng.core,global.Rx,global.Rx.Observable,global.Rx.Observable,global.rxjs_operator_concatMap,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx,global.Rx.Observable,global.Rx.Observable.prototype,global.Rx,global.Rx.Observable.prototype));
 	}(this, function (exports,_angular_common,_angular_core,rxjs_Subject,rxjs_observable_from,rxjs_observable_of,rxjs_operator_concatMap,rxjs_operator_every,rxjs_operator_map,rxjs_operator_mergeAll,rxjs_operator_mergeMap,rxjs_operator_reduce,rxjs_Observable,rxjs_operator_catch,rxjs_operator_concatAll,rxjs_operator_first,rxjs_util_EmptyError,rxjs_observable_fromPromise,l,rxjs_BehaviorSubject,rxjs_operator_filter) { 'use strict';
@@ -38589,16 +38596,16 @@
 
 
 /***/ },
-/* 26 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var FromObservable_1 = __webpack_require__(27);
+	var FromObservable_1 = __webpack_require__(28);
 	exports.from = FromObservable_1.FromObservable.create;
 	//# sourceMappingURL=from.js.map
 
 /***/ },
-/* 27 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -38607,16 +38614,16 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var isArray_1 = __webpack_require__(11);
-	var isPromise_1 = __webpack_require__(28);
-	var PromiseObservable_1 = __webpack_require__(29);
-	var IteratorObservable_1 = __webpack_require__(30);
-	var ArrayObservable_1 = __webpack_require__(32);
-	var ArrayLikeObservable_1 = __webpack_require__(36);
-	var iterator_1 = __webpack_require__(31);
-	var Observable_1 = __webpack_require__(5);
-	var observeOn_1 = __webpack_require__(37);
-	var observable_1 = __webpack_require__(18);
+	var isArray_1 = __webpack_require__(12);
+	var isPromise_1 = __webpack_require__(29);
+	var PromiseObservable_1 = __webpack_require__(30);
+	var IteratorObservable_1 = __webpack_require__(31);
+	var ArrayObservable_1 = __webpack_require__(33);
+	var ArrayLikeObservable_1 = __webpack_require__(37);
+	var iterator_1 = __webpack_require__(32);
+	var Observable_1 = __webpack_require__(6);
+	var observeOn_1 = __webpack_require__(38);
+	var observable_1 = __webpack_require__(19);
 	var isArrayLike = (function (x) { return x && typeof x.length === 'number'; });
 	/**
 	 * We need this JSDoc comment for affecting ESDoc.
@@ -38719,7 +38726,7 @@
 	//# sourceMappingURL=FromObservable.js.map
 
 /***/ },
-/* 28 */
+/* 29 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -38730,7 +38737,7 @@
 	//# sourceMappingURL=isPromise.js.map
 
 /***/ },
-/* 29 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -38739,8 +38746,8 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var root_1 = __webpack_require__(6);
-	var Observable_1 = __webpack_require__(5);
+	var root_1 = __webpack_require__(7);
+	var Observable_1 = __webpack_require__(6);
 	/**
 	 * We need this JSDoc comment for affecting ESDoc.
 	 * @extends {Ignored}
@@ -38856,7 +38863,7 @@
 	//# sourceMappingURL=PromiseObservable.js.map
 
 /***/ },
-/* 30 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -38865,9 +38872,9 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var root_1 = __webpack_require__(6);
-	var Observable_1 = __webpack_require__(5);
-	var iterator_1 = __webpack_require__(31);
+	var root_1 = __webpack_require__(7);
+	var Observable_1 = __webpack_require__(6);
+	var iterator_1 = __webpack_require__(32);
 	/**
 	 * We need this JSDoc comment for affecting ESDoc.
 	 * @extends {Ignored}
@@ -39018,11 +39025,11 @@
 	//# sourceMappingURL=IteratorObservable.js.map
 
 /***/ },
-/* 31 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var root_1 = __webpack_require__(6);
+	var root_1 = __webpack_require__(7);
 	var Symbol = root_1.root.Symbol;
 	if (typeof Symbol === 'function') {
 	    if (Symbol.iterator) {
@@ -39055,7 +39062,7 @@
 	//# sourceMappingURL=iterator.js.map
 
 /***/ },
-/* 32 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -39064,10 +39071,10 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var Observable_1 = __webpack_require__(5);
-	var ScalarObservable_1 = __webpack_require__(33);
-	var EmptyObservable_1 = __webpack_require__(34);
-	var isScheduler_1 = __webpack_require__(35);
+	var Observable_1 = __webpack_require__(6);
+	var ScalarObservable_1 = __webpack_require__(34);
+	var EmptyObservable_1 = __webpack_require__(35);
+	var isScheduler_1 = __webpack_require__(36);
 	/**
 	 * We need this JSDoc comment for affecting ESDoc.
 	 * @extends {Ignored}
@@ -39182,7 +39189,7 @@
 	//# sourceMappingURL=ArrayObservable.js.map
 
 /***/ },
-/* 33 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -39191,7 +39198,7 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var Observable_1 = __webpack_require__(5);
+	var Observable_1 = __webpack_require__(6);
 	/**
 	 * We need this JSDoc comment for affecting ESDoc.
 	 * @extends {Ignored}
@@ -39245,7 +39252,7 @@
 	//# sourceMappingURL=ScalarObservable.js.map
 
 /***/ },
-/* 34 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -39254,7 +39261,7 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var Observable_1 = __webpack_require__(5);
+	var Observable_1 = __webpack_require__(6);
 	/**
 	 * We need this JSDoc comment for affecting ESDoc.
 	 * @extends {Ignored}
@@ -39325,7 +39332,7 @@
 	//# sourceMappingURL=EmptyObservable.js.map
 
 /***/ },
-/* 35 */
+/* 36 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -39336,7 +39343,7 @@
 	//# sourceMappingURL=isScheduler.js.map
 
 /***/ },
-/* 36 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -39345,9 +39352,9 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var Observable_1 = __webpack_require__(5);
-	var ScalarObservable_1 = __webpack_require__(33);
-	var EmptyObservable_1 = __webpack_require__(34);
+	var Observable_1 = __webpack_require__(6);
+	var ScalarObservable_1 = __webpack_require__(34);
+	var EmptyObservable_1 = __webpack_require__(35);
 	/**
 	 * We need this JSDoc comment for affecting ESDoc.
 	 * @extends {Ignored}
@@ -39411,7 +39418,7 @@
 	//# sourceMappingURL=ArrayLikeObservable.js.map
 
 /***/ },
-/* 37 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -39420,8 +39427,8 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var Subscriber_1 = __webpack_require__(8);
-	var Notification_1 = __webpack_require__(38);
+	var Subscriber_1 = __webpack_require__(9);
+	var Notification_1 = __webpack_require__(39);
 	/**
 	 * @see {@link Notification}
 	 *
@@ -39491,11 +39498,11 @@
 	//# sourceMappingURL=observeOn.js.map
 
 /***/ },
-/* 38 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var Observable_1 = __webpack_require__(5);
+	var Observable_1 = __webpack_require__(6);
 	/**
 	 * Represents a push-based event or value that an {@link Observable} can emit.
 	 * This class is particularly useful for operators that manage notifications,
@@ -39623,20 +39630,20 @@
 	//# sourceMappingURL=Notification.js.map
 
 /***/ },
-/* 39 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var ArrayObservable_1 = __webpack_require__(32);
-	exports.of = ArrayObservable_1.ArrayObservable.of;
-	//# sourceMappingURL=of.js.map
-
-/***/ },
 /* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var mergeMap_1 = __webpack_require__(41);
+	var ArrayObservable_1 = __webpack_require__(33);
+	exports.of = ArrayObservable_1.ArrayObservable.of;
+	//# sourceMappingURL=of.js.map
+
+/***/ },
+/* 41 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var mergeMap_1 = __webpack_require__(42);
 	/**
 	 * Projects each source value to an Observable which is merged in the output
 	 * Observable, in a serialized fashion waiting for each one to complete before
@@ -39700,7 +39707,7 @@
 	//# sourceMappingURL=concatMap.js.map
 
 /***/ },
-/* 41 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -39709,8 +39716,8 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var subscribeToResult_1 = __webpack_require__(42);
-	var OuterSubscriber_1 = __webpack_require__(44);
+	var subscribeToResult_1 = __webpack_require__(43);
+	var OuterSubscriber_1 = __webpack_require__(45);
 	/**
 	 * Projects each source value to an Observable which is merged in the output
 	 * Observable.
@@ -39866,17 +39873,17 @@
 	//# sourceMappingURL=mergeMap.js.map
 
 /***/ },
-/* 42 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var root_1 = __webpack_require__(6);
-	var isArray_1 = __webpack_require__(11);
-	var isPromise_1 = __webpack_require__(28);
-	var Observable_1 = __webpack_require__(5);
-	var iterator_1 = __webpack_require__(31);
-	var InnerSubscriber_1 = __webpack_require__(43);
-	var observable_1 = __webpack_require__(18);
+	var root_1 = __webpack_require__(7);
+	var isArray_1 = __webpack_require__(12);
+	var isPromise_1 = __webpack_require__(29);
+	var Observable_1 = __webpack_require__(6);
+	var iterator_1 = __webpack_require__(32);
+	var InnerSubscriber_1 = __webpack_require__(44);
+	var observable_1 = __webpack_require__(19);
 	function subscribeToResult(outerSubscriber, result, outerValue, outerIndex) {
 	    var destination = new InnerSubscriber_1.InnerSubscriber(outerSubscriber, outerValue, outerIndex);
 	    if (destination.closed) {
@@ -39945,7 +39952,7 @@
 	//# sourceMappingURL=subscribeToResult.js.map
 
 /***/ },
-/* 43 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -39954,7 +39961,7 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var Subscriber_1 = __webpack_require__(8);
+	var Subscriber_1 = __webpack_require__(9);
 	/**
 	 * We need this JSDoc comment for affecting ESDoc.
 	 * @ignore
@@ -39986,7 +39993,7 @@
 	//# sourceMappingURL=InnerSubscriber.js.map
 
 /***/ },
-/* 44 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -39995,7 +40002,7 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var Subscriber_1 = __webpack_require__(8);
+	var Subscriber_1 = __webpack_require__(9);
 	/**
 	 * We need this JSDoc comment for affecting ESDoc.
 	 * @ignore
@@ -40021,7 +40028,7 @@
 	//# sourceMappingURL=OuterSubscriber.js.map
 
 /***/ },
-/* 45 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -40030,7 +40037,7 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var Subscriber_1 = __webpack_require__(8);
+	var Subscriber_1 = __webpack_require__(9);
 	/**
 	 * Returns an Observable that emits whether or not every item of the source satisfies the condition specified.
 	 * @param {function} predicate a function for determining if an item meets a specified condition.
@@ -40094,7 +40101,7 @@
 	//# sourceMappingURL=every.js.map
 
 /***/ },
-/* 46 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -40103,7 +40110,7 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var Subscriber_1 = __webpack_require__(8);
+	var Subscriber_1 = __webpack_require__(9);
 	/**
 	 * Applies a given `project` function to each value emitted by the source
 	 * Observable, and emits the resulting values as an Observable.
@@ -40186,7 +40193,7 @@
 	//# sourceMappingURL=map.js.map
 
 /***/ },
-/* 47 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -40195,8 +40202,8 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var OuterSubscriber_1 = __webpack_require__(44);
-	var subscribeToResult_1 = __webpack_require__(42);
+	var OuterSubscriber_1 = __webpack_require__(45);
+	var subscribeToResult_1 = __webpack_require__(43);
 	/**
 	 * Converts a higher-order Observable into a first-order Observable which
 	 * concurrently delivers all values that are emitted on the inner Observables.
@@ -40302,7 +40309,7 @@
 	//# sourceMappingURL=mergeAll.js.map
 
 /***/ },
-/* 48 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -40311,7 +40318,7 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var Subscriber_1 = __webpack_require__(8);
+	var Subscriber_1 = __webpack_require__(9);
 	/**
 	 * Applies an accumulator function over the source Observable, and returns the
 	 * accumulated result when the source completes, given an optional seed value.
@@ -40419,7 +40426,7 @@
 	//# sourceMappingURL=reduce.js.map
 
 /***/ },
-/* 49 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -40428,8 +40435,8 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var OuterSubscriber_1 = __webpack_require__(44);
-	var subscribeToResult_1 = __webpack_require__(42);
+	var OuterSubscriber_1 = __webpack_require__(45);
+	var subscribeToResult_1 = __webpack_require__(43);
 	/**
 	 * Catches errors on the observable to be handled by returning a new observable or throwing an error.
 	 * @param {function} selector a function that takes as arguments `err`, which is the error, and `caught`, which
@@ -40489,11 +40496,11 @@
 	//# sourceMappingURL=catch.js.map
 
 /***/ },
-/* 50 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var mergeAll_1 = __webpack_require__(47);
+	var mergeAll_1 = __webpack_require__(48);
 	/**
 	 * Converts a higher-order Observable into a first-order Observable by
 	 * concatenating the inner Observables in order.
@@ -40543,7 +40550,7 @@
 	//# sourceMappingURL=concatAll.js.map
 
 /***/ },
-/* 51 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -40552,8 +40559,8 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var Subscriber_1 = __webpack_require__(8);
-	var EmptyError_1 = __webpack_require__(52);
+	var Subscriber_1 = __webpack_require__(9);
+	var EmptyError_1 = __webpack_require__(53);
 	/**
 	 * Emits only the first value (or the first value that meets some condition)
 	 * emitted by the source Observable.
@@ -40696,7 +40703,7 @@
 	//# sourceMappingURL=first.js.map
 
 /***/ },
-/* 52 */
+/* 53 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -40729,16 +40736,16 @@
 	//# sourceMappingURL=EmptyError.js.map
 
 /***/ },
-/* 53 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var PromiseObservable_1 = __webpack_require__(29);
+	var PromiseObservable_1 = __webpack_require__(30);
 	exports.fromPromise = PromiseObservable_1.PromiseObservable.create;
 	//# sourceMappingURL=fromPromise.js.map
 
 /***/ },
-/* 54 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -40747,8 +40754,8 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var Subscriber_1 = __webpack_require__(8);
-	var EmptyError_1 = __webpack_require__(52);
+	var Subscriber_1 = __webpack_require__(9);
+	var EmptyError_1 = __webpack_require__(53);
 	/**
 	 * Returns an Observable that emits only the last item emitted by the source Observable.
 	 * It optionally takes a predicate function as a parameter, in which case, rather than emitting
@@ -40861,7 +40868,7 @@
 	//# sourceMappingURL=last.js.map
 
 /***/ },
-/* 55 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -40870,8 +40877,8 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var Subject_1 = __webpack_require__(4);
-	var ObjectUnsubscribedError_1 = __webpack_require__(19);
+	var Subject_1 = __webpack_require__(5);
+	var ObjectUnsubscribedError_1 = __webpack_require__(20);
 	/**
 	 * @class BehaviorSubject<T>
 	 */
@@ -40915,7 +40922,7 @@
 	//# sourceMappingURL=BehaviorSubject.js.map
 
 /***/ },
-/* 56 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -40924,7 +40931,7 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var Subscriber_1 = __webpack_require__(8);
+	var Subscriber_1 = __webpack_require__(9);
 	/**
 	 * Filter items emitted by the source Observable by only emitting those that
 	 * satisfy a specified predicate.
@@ -41013,47 +41020,6 @@
 	//# sourceMappingURL=filter.js.map
 
 /***/ },
-/* 57 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-	    return c > 3 && r && Object.defineProperty(target, key, r), r;
-	};
-	var __metadata = (this && this.__metadata) || function (k, v) {
-	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-	};
-	/**
-	 * Created by villadsvalur on 02/11/2016.
-	 */
-	var core_1 = __webpack_require__(3);
-	var common_1 = __webpack_require__(22);
-	//TODO: Find ud af hvad den reelt skal den her component.
-	var SettingsComponent = (function () {
-	    function SettingsComponent(location) {
-	        this.location = location;
-	    }
-	    SettingsComponent.prototype.goBack = function () {
-	        this.location.back();
-	    };
-	    SettingsComponent = __decorate([
-	        core_1.Component({
-	            selector: 'settings-component',
-	            templateUrl: 'app/templates/settings.component.html',
-	            styleUrls: ['app/stylesheets/settings.component.css']
-	        }), 
-	        __metadata('design:paramtypes', [(typeof (_a = typeof common_1.Location !== 'undefined' && common_1.Location) === 'function' && _a) || Object])
-	    ], SettingsComponent);
-	    return SettingsComponent;
-	    var _a;
-	}());
-	exports.SettingsComponent = SettingsComponent;
-	//# sourceMappingURL=settings.component.js.map
-
-/***/ },
 /* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -41070,13 +41036,53 @@
 	/**
 	 * Created by villadsvalur on 02/11/2016.
 	 */
-	var core_1 = __webpack_require__(3);
-	var router_1 = __webpack_require__(25);
-	var common_1 = __webpack_require__(22);
-	var cards_component_1 = __webpack_require__(59);
-	var image_detail_component_1 = __webpack_require__(67);
-	var settings_component_1 = __webpack_require__(57);
-	var single_user_component_1 = __webpack_require__(68);
+	var core_1 = __webpack_require__(4);
+	var common_1 = __webpack_require__(23);
+	//TODO: Find ud af hvad den reelt skal den her component.
+	var SettingsComponent = (function () {
+	    function SettingsComponent(location) {
+	        this.location = location;
+	    }
+	    SettingsComponent.prototype.goBack = function () {
+	        this.location.back();
+	    };
+	    SettingsComponent = __decorate([
+	        core_1.Component({
+	            selector: 'settings-component',
+	            templateUrl: 'app/templates/settings.component.html',
+	            styleUrls: ['app/stylesheets/settings.component.css']
+	        }), 
+	        __metadata('design:paramtypes', [common_1.Location])
+	    ], SettingsComponent);
+	    return SettingsComponent;
+	}());
+	exports.SettingsComponent = SettingsComponent;
+	//# sourceMappingURL=settings.component.js.map
+
+/***/ },
+/* 59 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	/**
+	 * Created by villadsvalur on 02/11/2016.
+	 */
+	var core_1 = __webpack_require__(4);
+	var router_1 = __webpack_require__(26);
+	var common_1 = __webpack_require__(23);
+	var cards_component_1 = __webpack_require__(60);
+	var image_detail_component_1 = __webpack_require__(68);
+	var settings_component_1 = __webpack_require__(58);
+	var single_user_component_1 = __webpack_require__(69);
 	var routes = [
 	    { path: '', redirectTo: '/cards', pathMatch: 'full' },
 	    { path: 'user', component: single_user_component_1.SingleUserComponent },
@@ -41101,7 +41107,7 @@
 	//# sourceMappingURL=app-routing.module.js.map
 
 /***/ },
-/* 59 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -41117,10 +41123,10 @@
 	/**
 	 * Created by villadsvalur on 15/11/2016.
 	 */
-	var core_1 = __webpack_require__(3);
-	var platform_browser_1 = __webpack_require__(21);
-	var forms_1 = __webpack_require__(60);
-	var swipe_cards_module_1 = __webpack_require__(62);
+	var core_1 = __webpack_require__(4);
+	var platform_browser_1 = __webpack_require__(22);
+	var forms_1 = __webpack_require__(61);
+	var swipe_cards_module_1 = __webpack_require__(63);
 	var CardsComponent = (function () {
 	    function CardsComponent() {
 	        this.visible = false;
@@ -41138,7 +41144,7 @@
 	        this.cardLogs = [];
 	        this.tinderCardLogs = [];
 	        this.aloneArray = [];
-	        var randomUser = ['Ida', 'Emmeli', 'Jonas', 'Maria', 'Ida', 'Emmeli', 'Jonas', 'Maria', 'Jonas', 'Ida', 'Jonas'];
+	        var randomUser = ['Adam', 'Denise', 'El', 'Ida', 'Emmeli', 'Jonas', 'Maria', 'Elvira', 'Frederik', 'Gary', 'Sylvester'];
 	        this.imageAlone();
 	        for (var i = 0; i < 50; i++) {
 	            var randomNumber = Math.floor((Math.random() * 10) + 1);
@@ -41146,8 +41152,8 @@
 	                id: i + 1,
 	                likeEvent: new core_1.EventEmitter(),
 	                destroyEvent: new core_1.EventEmitter(),
-	                leftUrl: 'assets/mock-user-images/' + randomUser[randomNumber] + '1.png   ',
-	                rightUrl: 'assets/mock-user-images/' + randomUser[randomNumber] + '2.png',
+	                leftUrl: 'assets/mock-user-images/' + randomUser[randomNumber] + '1.jpg   ',
+	                rightUrl: 'assets/mock-user-images/' + randomUser[randomNumber] + '2.jpg',
 	                alone: this.aloneArray[i]
 	            });
 	        }
@@ -41241,7 +41247,7 @@
 	//# sourceMappingURL=cards.component.js.map
 
 /***/ },
-/* 60 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -41250,7 +41256,7 @@
 	 * License: MIT
 	 */
 	(function (global, factory) {
-	     true ? factory(exports, __webpack_require__(3), __webpack_require__(61), __webpack_require__(4), __webpack_require__(5), __webpack_require__(53)) :
+	     true ? factory(exports, __webpack_require__(4), __webpack_require__(62), __webpack_require__(5), __webpack_require__(6), __webpack_require__(54)) :
 	    typeof define === 'function' && define.amd ? define(['exports', '@angular/core', 'rxjs/operator/toPromise', 'rxjs/Subject', 'rxjs/Observable', 'rxjs/observable/fromPromise'], factory) :
 	    (factory((global.ng = global.ng || {}, global.ng.forms = global.ng.forms || {}),global.ng.core,global.Rx.Observable.prototype,global.Rx,global.Rx,global.Rx.Observable));
 	}(this, function (exports,_angular_core,rxjs_operator_toPromise,rxjs_Subject,rxjs_Observable,rxjs_observable_fromPromise) { 'use strict';
@@ -45684,11 +45690,11 @@
 
 
 /***/ },
-/* 61 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var root_1 = __webpack_require__(6);
+	var root_1 = __webpack_require__(7);
 	/**
 	 * @param PromiseCtor
 	 * @return {Promise<T>}
@@ -45717,7 +45723,7 @@
 	//# sourceMappingURL=toPromise.js.map
 
 /***/ },
-/* 62 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -45738,12 +45744,12 @@
 	/**
 	 * Created by villadsvalur on 15/11/2016.
 	 */
-	var core_1 = __webpack_require__(3);
-	var platform_browser_1 = __webpack_require__(21);
-	var swipe_cards_component_1 = __webpack_require__(63);
-	var swipe_cards_directive_1 = __webpack_require__(64);
-	var platform_browser_2 = __webpack_require__(21);
-	var user_service_1 = __webpack_require__(65);
+	var core_1 = __webpack_require__(4);
+	var platform_browser_1 = __webpack_require__(22);
+	var swipe_cards_component_1 = __webpack_require__(64);
+	var swipe_cards_directive_1 = __webpack_require__(65);
+	var platform_browser_2 = __webpack_require__(22);
+	var user_service_1 = __webpack_require__(66);
 	var HammerConfig = (function (_super) {
 	    __extends(HammerConfig, _super);
 	    function HammerConfig() {
@@ -45786,7 +45792,7 @@
 	//# sourceMappingURL=swipe-cards.module.js.map
 
 /***/ },
-/* 63 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -45802,7 +45808,7 @@
 	/**
 	 * Created by villadsvalur on 15/11/2016.
 	 */
-	var core_1 = __webpack_require__(3);
+	var core_1 = __webpack_require__(4);
 	var CardComponent = (function () {
 	    function CardComponent(el, renderer) {
 	        this.el = el;
@@ -45910,19 +45916,19 @@
 	    ], CardComponent.prototype, "orientation", void 0);
 	    __decorate([
 	        core_1.Input(), 
-	        __metadata('design:type', (typeof (_a = typeof core_1.EventEmitter !== 'undefined' && core_1.EventEmitter) === 'function' && _a) || Object)
+	        __metadata('design:type', core_1.EventEmitter)
 	    ], CardComponent.prototype, "callDestroy", void 0);
 	    __decorate([
 	        core_1.Output(), 
-	        __metadata('design:type', (typeof (_b = typeof core_1.EventEmitter !== 'undefined' && core_1.EventEmitter) === 'function' && _b) || Object)
+	        __metadata('design:type', core_1.EventEmitter)
 	    ], CardComponent.prototype, "onRelease", void 0);
 	    __decorate([
 	        core_1.Output(), 
-	        __metadata('design:type', (typeof (_c = typeof core_1.EventEmitter !== 'undefined' && core_1.EventEmitter) === 'function' && _c) || Object)
+	        __metadata('design:type', core_1.EventEmitter)
 	    ], CardComponent.prototype, "onSwipe", void 0);
 	    __decorate([
 	        core_1.Output(), 
-	        __metadata('design:type', (typeof (_d = typeof core_1.EventEmitter !== 'undefined' && core_1.EventEmitter) === 'function' && _d) || Object)
+	        __metadata('design:type', core_1.EventEmitter)
 	    ], CardComponent.prototype, "onAbort", void 0);
 	    __decorate([
 	        core_1.HostListener('pan', ['$event']), 
@@ -45941,16 +45947,15 @@
 	            template: '<ng-content></ng-content>',
 	            selector: 'sc-card',
 	            styleUrls: ['app/stylesheets/swipe-cards.component.css'] }), 
-	        __metadata('design:paramtypes', [(typeof (_e = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _e) || Object, (typeof (_f = typeof core_1.Renderer !== 'undefined' && core_1.Renderer) === 'function' && _f) || Object])
+	        __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
 	    ], CardComponent);
 	    return CardComponent;
-	    var _a, _b, _c, _d, _e, _f;
 	}());
 	exports.CardComponent = CardComponent;
 	//# sourceMappingURL=swipe-cards.component.js.map
 
 /***/ },
-/* 64 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -45966,7 +45971,7 @@
 	/**
 	 * Created by villadsvalur on 15/11/2016.
 	 */
-	var core_1 = __webpack_require__(3);
+	var core_1 = __webpack_require__(4);
 	var TinderCardDirective = (function () {
 	    function TinderCardDirective(el, renderer) {
 	        this.orientation = 'xy';
@@ -46091,7 +46096,7 @@
 	    ], TinderCardDirective.prototype, "overlay", void 0);
 	    __decorate([
 	        core_1.Input(), 
-	        __metadata('design:type', (typeof (_a = typeof core_1.EventEmitter !== 'undefined' && core_1.EventEmitter) === 'function' && _a) || Object)
+	        __metadata('design:type', core_1.EventEmitter)
 	    ], TinderCardDirective.prototype, "callLike", void 0);
 	    __decorate([
 	        core_1.Input(), 
@@ -46103,7 +46108,7 @@
 	    ], TinderCardDirective.prototype, "orientation", void 0);
 	    __decorate([
 	        core_1.Output(), 
-	        __metadata('design:type', (typeof (_b = typeof core_1.EventEmitter !== 'undefined' && core_1.EventEmitter) === 'function' && _b) || Object)
+	        __metadata('design:type', core_1.EventEmitter)
 	    ], TinderCardDirective.prototype, "onLike", void 0);
 	    __decorate([
 	        core_1.HostListener('onSwipe', ['$event']), 
@@ -46130,16 +46135,15 @@
 	                class: 'card-heap'
 	            }
 	        }), 
-	        __metadata('design:paramtypes', [(typeof (_c = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _c) || Object, (typeof (_d = typeof core_1.Renderer !== 'undefined' && core_1.Renderer) === 'function' && _d) || Object])
+	        __metadata('design:paramtypes', [core_1.ElementRef, core_1.Renderer])
 	    ], TinderCardDirective);
 	    return TinderCardDirective;
-	    var _a, _b, _c, _d;
 	}());
 	exports.TinderCardDirective = TinderCardDirective;
 	//# sourceMappingURL=swipe-cards.directive.js.map
 
 /***/ },
-/* 65 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -46156,8 +46160,8 @@
 	/**
 	 * Created by villadsvalur on 07/11/2016.
 	 */
-	var core_1 = __webpack_require__(3);
-	var mock_data_1 = __webpack_require__(66);
+	var core_1 = __webpack_require__(4);
+	var mock_data_1 = __webpack_require__(67);
 	var UserService = (function () {
 	    function UserService() {
 	    }
@@ -46181,7 +46185,7 @@
 	//# sourceMappingURL=user.service.js.map
 
 /***/ },
-/* 66 */
+/* 67 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -46274,62 +46278,6 @@
 	//# sourceMappingURL=mock-data.js.map
 
 /***/ },
-/* 67 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-	    return c > 3 && r && Object.defineProperty(target, key, r), r;
-	};
-	var __metadata = (this && this.__metadata) || function (k, v) {
-	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-	};
-	/**
-	 * Created by villadsvalur on 22/11/2016.
-	 */
-	var core_1 = __webpack_require__(3);
-	var router_1 = __webpack_require__(25);
-	var common_1 = __webpack_require__(22);
-	var user_service_1 = __webpack_require__(65);
-	var ImageDetailComponent = (function () {
-	    function ImageDetailComponent(router, userService, location) {
-	        this.router = router;
-	        this.userService = userService;
-	        this.location = location;
-	        this.visible = false;
-	    }
-	    ImageDetailComponent.prototype.ngOnInit = function () {
-	        var _this = this;
-	        this.router.params.forEach(function (params) {
-	            var id = +params['id'];
-	            _this.userService.getImage(id)
-	                .then(function (image) { return _this.image = image; });
-	        });
-	    };
-	    ImageDetailComponent.prototype.goBack = function () {
-	        this.location.back();
-	    };
-	    ImageDetailComponent.prototype.toggleComments = function () {
-	        this.visible = !this.visible;
-	    };
-	    ImageDetailComponent = __decorate([
-	        core_1.Component({
-	            selector: 'image-detail',
-	            templateUrl: 'app/templates/image-detail.component.html',
-	            styleUrls: ['app/stylesheets/image-detail.component.css']
-	        }), 
-	        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.ActivatedRoute !== 'undefined' && router_1.ActivatedRoute) === 'function' && _a) || Object, user_service_1.UserService, (typeof (_b = typeof common_1.Location !== 'undefined' && common_1.Location) === 'function' && _b) || Object])
-	    ], ImageDetailComponent);
-	    return ImageDetailComponent;
-	    var _a, _b;
-	}());
-	exports.ImageDetailComponent = ImageDetailComponent;
-	//# sourceMappingURL=image-detail.component.js.map
-
-/***/ },
 /* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -46346,9 +46294,89 @@
 	/**
 	 * Created by villadsvalur on 22/11/2016.
 	 */
-	var core_1 = __webpack_require__(3);
-	var router_1 = __webpack_require__(25);
-	var user_service_1 = __webpack_require__(65);
+	var core_1 = __webpack_require__(4);
+	var router_1 = __webpack_require__(26);
+	var common_1 = __webpack_require__(23);
+	var user_service_1 = __webpack_require__(66);
+	var ImageDetailComponent = (function () {
+	    function ImageDetailComponent(router, imageRouter, userService, location) {
+	        this.router = router;
+	        this.imageRouter = imageRouter;
+	        this.userService = userService;
+	        this.location = location;
+	        this.visible = false;
+	    }
+	    ImageDetailComponent.prototype.ngOnInit = function () {
+	        var _this = this;
+	        this.router.params.forEach(function (params) {
+	            var id = +params['id'];
+	            _this.userService.getImage(id)
+	                .then(function (image) { return _this.image = image; });
+	        });
+	        this.getImages();
+	        this.setRandomImageString();
+	    };
+	    ImageDetailComponent.prototype.getImages = function () {
+	        var _this = this;
+	        this.userService.getImages().then(function (userImages) { return _this.userImages = userImages; });
+	    };
+	    ImageDetailComponent.prototype.setRandomImageString = function () {
+	        this.randomNumber1 = Math.floor((Math.random() * 10) + 1);
+	        this.randomNumber2 = Math.floor((Math.random() * 10) + 1);
+	        if (this.randomNumber1 == this.randomNumber2) {
+	            this.randomNumber1 = Math.floor((Math.random() * 10) + 1);
+	        }
+	        else {
+	            this.randomImageStringRight = 'assets/mock-user-images/johnny/jd' + this.randomNumber1 + '.jpg';
+	            this.randomImageStringLeft = 'assets/mock-user-images/johnny/jd' + this.randomNumber2 + '.jpg';
+	        }
+	        console.log(this.randomImageStringRight);
+	        console.log(this.randomImageStringLeft);
+	        console.log(this.randomNumber1);
+	        console.log(this.randomNumber2);
+	    };
+	    ImageDetailComponent.prototype.goBack = function () {
+	        this.location.back();
+	    };
+	    ImageDetailComponent.prototype.toggleCommentsAndSuggestions = function () {
+	        this.visible = !this.visible;
+	    };
+	    ImageDetailComponent.prototype.gotoDetail = function (id) {
+	        this.imageRouter.navigate(['/detail', id]);
+	    };
+	    ImageDetailComponent = __decorate([
+	        core_1.Component({
+	            selector: 'image-detail',
+	            templateUrl: 'app/templates/image-detail.component.html',
+	            styleUrls: ['app/stylesheets/image-detail.component.css']
+	        }), 
+	        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, user_service_1.UserService, common_1.Location])
+	    ], ImageDetailComponent);
+	    return ImageDetailComponent;
+	}());
+	exports.ImageDetailComponent = ImageDetailComponent;
+	//# sourceMappingURL=image-detail.component.js.map
+
+/***/ },
+/* 69 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	/**
+	 * Created by villadsvalur on 22/11/2016.
+	 */
+	var core_1 = __webpack_require__(4);
+	var router_1 = __webpack_require__(26);
+	var user_service_1 = __webpack_require__(66);
 	var SingleUserComponent = (function () {
 	    function SingleUserComponent(router, userService) {
 	        this.router = router;
@@ -46376,10 +46404,9 @@
 	            templateUrl: 'app/templates/single-user.component.html',
 	            styleUrls: ['app/stylesheets/single-user.component.css']
 	        }), 
-	        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object, user_service_1.UserService])
+	        __metadata('design:paramtypes', [router_1.Router, user_service_1.UserService])
 	    ], SingleUserComponent);
 	    return SingleUserComponent;
-	    var _a;
 	}());
 	exports.SingleUserComponent = SingleUserComponent;
 	//# sourceMappingURL=single-user.component.js.map

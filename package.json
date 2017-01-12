@@ -2,14 +2,14 @@
   "name": "ShouldIPostIt",
   "version": "1.0.0",
   "description": "App-prototype for 'Should I Post It?'",
-  "author":"Villads Nielsen <villadsvalur@gmail.com>",
+  "author": "Villads Nielsen <villadsvalur@gmail.com>",
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server"
   },
-  "repository":{
-    "type":"git",
-    "url":"https://github.com/Vanluren/SIPIDev.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vanluren/SIPIDev.git"
   },
   "dependencies": {
     "@angular/common": "~2.1.1",
@@ -24,6 +24,7 @@
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
     "hammerjs": "^2.0.8",
+    "http-server": "^0.9.0",
     "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.0-beta.12",
     "systemjs": "0.19.39",
@@ -35,5 +36,5 @@
     "@types/node": "^6.0.45",
     "typescript": "^2.0.3"
   },
-  "license":""
+  "license": ""
 }
